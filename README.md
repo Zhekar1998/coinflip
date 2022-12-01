@@ -1,26 +1,7 @@
-near-blank-project
+CoinFlip
 ==================
 
-This app was initialized with [create-near-app]
-
-
-Quick Start
-===========
-
-If you haven't installed dependencies during setup:
-
-    npm install
-
-
-Build and deploy your contract to TestNet with a temporary dev account:
-
-    npm run deploy
-
-Test your contract:
-
-    npm test
-
-If you have a frontend, run `npm start`. This will run a dev server.
+Project for coin flip game on Near Protocol 
 
 
 Exploring The Code
@@ -28,10 +9,6 @@ Exploring The Code
 
 1. The smart-contract code lives in the `/contract` folder. See the README there for
    more info. In blockchain apps the smart contract is the "backend" of your app.
-2. The frontend code lives in the `/frontend` folder. `/frontend/index.html` is a great
-   place to start exploring. Note that it loads in `/frontend/index.js`,
-   this is your entrypoint to learn how the frontend connects to the NEAR blockchain.
-3. Test your contract: `npm test`, this will run the tests in `integration-tests` directory.
 
 
 Deploy
@@ -85,16 +62,16 @@ Modify the line in `src/config.js` that sets the account name of the contract. S
 
 
 
-Troubleshooting
-===============
+Function owerview
+==================
 
-On Windows, if you're seeing an error containing `EPERM` it may be related to spaces in your path. Please see [this issue](https://github.com/zkat/npx/issues/209) for more details.
+View functions:
+----------------------
 
+1) pub fn get_active_list(&self)
+----------------
+get all active games
+return data:
+{[initiator, init_side, bid, time_start, key], [initiator, init_side, bid, time_start, key], .....}
 
-  [create-near-app]: https://github.com/near/create-near-app
-  [Node.js]: https://nodejs.org/en/download/package-manager/
-  [jest]: https://jestjs.io/
-  [NEAR accounts]: https://docs.near.org/concepts/basics/account
-  [NEAR Wallet]: https://wallet.testnet.near.org/
-  [near-cli]: https://github.com/near/near-cli
-  [gh-pages]: https://github.com/tschaub/gh-pages
+2)
